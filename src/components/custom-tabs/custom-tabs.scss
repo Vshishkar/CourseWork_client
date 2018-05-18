@@ -1,0 +1,18 @@
+custom-tabs {
+
+
+
+   div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #ffffff;
+    width: 100%;
+    float: bottom;
+  }
+
+  div ion-icon{
+    color: #666;
+  }
+
+}

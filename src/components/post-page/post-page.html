@@ -1,0 +1,49 @@
+<ion-list  *ngFor="let user of userPosts">
+
+<ion-item class="post" (click)="viewProfile(user)">
+  <ion-avatar item-start>
+    <img src={{user.avatarPhotoUrl}}>
+  </ion-avatar>
+  <h2> {{user.username}}</h2>
+  <p> {{user.location}}</p>
+
+</ion-item>
+
+<img src={{user.postPhotoUrl}}>
+
+<ion-card-content>
+  {{user.description}}
+</ion-card-content>
+
+<ion-row>
+  <ion-col class="my-icons">
+    <button ion-button
+            icon-only
+            clear
+
+            class="like" >
+      <ion-icon name="heart-outline"></ion-icon>
+      <h1 > {{user.likes}}</h1>
+    </button>
+    <button ion-button
+            icon-only
+            clear
+            (click)="showPrompt(user)">
+      <ion-icon name="chatbubbles"></ion-icon>
+
+    </button>
+    <button ion-button
+            icon-only
+            clear
+    >
+      <ion-icon name="share-alt"></ion-icon>
+
+    </button>
+  </ion-col>
+
+</ion-row>
+
+
+
+</ion-list>
+

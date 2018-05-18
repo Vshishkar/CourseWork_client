@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar >
+    <ion-title>Create Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-row class="account-form">
+    <ion-col>
+      <ion-list inset>
+
+        <ion-item *ngIf="message_hint">
+          <p> {{message_hint}} </p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+          <ion-input [(ngModel)]="username" placeholder="username" type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+          <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+        </ion-item>
+
+    <!--    <ion-item>
+          <ion-label>Role</ion-label>
+          <ion-select [(ngModel)]="role">
+            <ion-option value="user">Reader</ion-option>
+            <ion-option value="admin">Creator</ion-option>
+          </ion-select>
+        </ion-item>-->
+
+      </ion-list>
+
+      <button ion-button (click)="register()"
+              class="continue-button"
+              round
+              full
+              >
+        Register
+      </button>
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>
